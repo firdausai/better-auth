@@ -86,6 +86,7 @@ export const auth = betterAuth({
 		accountLinking: {
 			trustedProviders: ["google", "github", "demo-app", "sso"],
 		},
+    encryptOAuthTokens: true // After accessTokenExpiresAt expired, change this from `False` to `True`
 	},
 	emailAndPassword: {
 		enabled: true,

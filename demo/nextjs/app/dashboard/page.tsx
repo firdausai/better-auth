@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import AccountSwitcher from "@/components/account-switch";
 import { auth } from "@/lib/auth";
 import { OrganizationCard } from "./organization-card";
+import { GoogleDriveCard } from "./google-drive-card";
 import UserCard from "./user-card";
 
 export default async function DashboardPage() {
@@ -44,6 +45,7 @@ export default async function DashboardPage() {
 					session={JSON.parse(JSON.stringify(session))}
 					activeOrganization={JSON.parse(JSON.stringify(organization))}
 				/>
+				<GoogleDriveCard />
 			</div>
 		</div>
 	);
